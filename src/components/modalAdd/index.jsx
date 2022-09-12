@@ -4,18 +4,25 @@ import { useAddContext } from "../../hooks/useAddContext";
 import { useForm } from "react-hook-form";
 
 export function ModalAdd() {
-  const { isModalOpen, setisModalOpen } = useAddContext();
+  const { isModalOpen, setisModalOpen, setAddFile   } = useAddContext();
   const {
     register,
     handleSubmit,
   } = useForm();
   const savePost = data => {
-    const dataStringifado = JSON.stringify(data);
     const localAtual = localStorage.getItem('minhasEntrevistas');
-    const array = [];
-    array.push(dataStringifado);
-    if(localAtual) array.push(localAtual);
-    localStorage.setItem('minhasEntrevistas', array);
+    const arrayData = [];
+    arrayData.push(data);
+    if(localAtual) {
+      const arrayParseado = JSON.parse(localAtual);
+       arrayParseado.push(data);
+       localStorage.setItem('minhasEntrevistas', JSON.stringify(arrayParseado));
+       setAddFile(true);
+    }
+    if(!localAtual) {
+       localStorage.setItem('minhasEntrevistas', JSON.stringify(arrayData));
+       setAddFile(true);
+    }
     setisModalOpen(false)
   };
   return (
@@ -35,7 +42,7 @@ export function ModalAdd() {
         </label>
         <label>
          Estimativa de retorno: {" "}
-          <input type="date" name="inscricao" {...register("inscricao")} />
+          <input type="date" name="retorno" {...register("retorno")} />
         </label>
         </TopInputs>
         <BottomInputs>

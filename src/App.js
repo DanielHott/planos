@@ -5,13 +5,15 @@ import { ModalAdd } from './components/modalAdd';
 import './App.css';
 import { AddContextProvider } from './hooks/useAddContext';
 import { InsertName } from './components/modalInsertName';
+import { Cards } from './components/cards';
 
 function App() {
   return (
     <AddContextProvider>
       <Header />
-        <ModalAdd />
+      <ModalAdd />
       <InsertName />
+      <Cards />
     </AddContextProvider>
   );
 }

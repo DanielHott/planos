@@ -4,11 +4,14 @@ const AddContext = createContext();
 
 export function AddContextProvider({ children }) {
     const [ isModalOpen, setisModalOpen ] = useState(false);
+    const [ addFile, setAddFile ] = useState(false);
 return (
     <AddContext.Provider
       value={{
         isModalOpen,
-        setisModalOpen
+        setisModalOpen,
+        addFile,
+        setAddFile,
       }}
     >
       {children}
@@ -18,6 +21,6 @@ return (
 
 export function useAddContext() {
   const context = useContext(AddContext);
-  const { isModalOpen, setisModalOpen } = context;
-  return { isModalOpen, setisModalOpen };
+  const { isModalOpen, setisModalOpen, addFile, setAddFile  } = context;
+  return { isModalOpen, setisModalOpen, addFile, setAddFile  };
 }
