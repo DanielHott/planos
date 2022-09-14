@@ -1,10 +1,14 @@
-import { Table } from "./styles";
+import { Table, Button } from "./styles";
 import { useEffect, useState } from "react";
 import { useAddContext } from "../../hooks/useAddContext";
+import { ModalEdit } from "../modalEdit";
 
 export function Cards () {
     const [ localAtual, setLocal ] = useState();
-    const { addFile, setAddFile   } = useAddContext();
+    const [ indexAtual, setIndex ] = useState(0);
+    const [ info, setInfo ] = useState({});
+    const [ changing, setChanging] = useState(false);
+    const { addFile, setAddFile, setisModalEditOpen } = useAddContext();
     const [load, setLoad] = useState(false);
     const loadFiles = () => {
         setLocal(JSON.parse(localStorage.getItem('minhasEntrevistas')));
@@ -15,6 +19,11 @@ export function Cards () {
         localStorage.setItem('minhasEntrevistas', JSON.stringify(novoLocal));
         setLoad(true);
         setAddFile(false);
+    }
+    const editar = (index, componentInfo) => {
+        setIndex(index);
+        setInfo(componentInfo);
+        setisModalEditOpen(true)
     }
     useEffect(() => {
         loadFiles();
@@ -27,6 +36,7 @@ export function Cards () {
     }
     return (
         <Table>
+            <ModalEdit info={info} index={indexAtual} />
             <tr>
                 <th>Empresa</th>
                 <th>Inscrição</th>
@@ -43,8 +53,8 @@ export function Cards () {
                     <td>{dateFormat(interview.retorno)}</td>
                     <td>{interview.descricao}</td>
                     <td>{interview.status}</td>
-                    <button onClick={() => apagar(index)}>Apagar</button>
-                    <button>Editar</button>
+                    <Button onClick={() => apagar(index)}>Apagar</Button>
+                    <Button onClick={() => editar(index, interview)}>Editar</Button>
                 </tr>
             )
            })}

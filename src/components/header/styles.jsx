@@ -7,16 +7,19 @@ export const Container = styled.div`
     align-items: center;
     border-radius: 10px;
     height: 5rem;
-    border: 2px solid black;
+    border: 2px solid violet;
+    margin-bottom: 10px;
 `;
 
 export const Button = styled.button`
-    border: 2px solid black;
+    border: 2px solid violet;
+    color: white;
     border-radius: 10px;
-    background-color: white;
+    background-color: #000000;
     font-weight: 800;
+    cursor: pointer;
     padding: 0.5rem;
     :hover {
-        box-shadow: 2px 5px 16px 0px #000000
+        border: 2px solid white;
     }
 `;

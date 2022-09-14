@@ -4,7 +4,7 @@ import { useAddContext } from "../../hooks/useAddContext";
 import { useForm } from "react-hook-form";
 
 export function ModalAdd() {
-  const { isModalOpen, setisModalOpen, setAddFile   } = useAddContext();
+  const { isModalOpen, setisModalOpen, setAddFile } = useAddContext();
   const {
     register,
     handleSubmit,
