@@ -6,4 +6,7 @@ A aplicação salva toda a sessão do usuário no localstorage e permite a adiç
 ## Tecnologia
 Desenvolvido em React.js, utilizando react-hook-form, styled-components, testes unitários com Jest e RTL e muito javascript.
 
+## Em desenvolvimento 🛠️
+Versão mobile sendo desenvolvida.
+
 Disponível em https://planos-seven.vercel.app/
