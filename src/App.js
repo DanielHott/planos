@@ -6,6 +6,7 @@ import './App.css';
 import { AddContextProvider } from './hooks/useAddContext';
 import { InsertName } from './components/modalInsertName';
 import { Cards } from './components/cards';
+import { Footer } from './components/footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ModalAdd />
       <InsertName />
       <Cards />
+      <Footer />
     </AddContextProvider>
   );
 }

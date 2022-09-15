@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     margin: 0;
     padding: 0;
+    input {
+        border: none;
+        background-color: #EEF3F8;
+        padding: 5px;
+        border-radius: 5px;
+    }
 `;
 
 export const Close = styled.div`
@@ -24,6 +30,10 @@ export const BottomInputs = styled.div`
         width: 900px;
         height: 3rem;
         margin-bottom: 10px;
+        border: none;
+        background-color: #EEF3F8;
+        padding: 5px;
+        border-radius: 5px;
     }
     fieldset {
         display: flex;
@@ -60,7 +70,7 @@ export const Form = styled.form`
     position: absolute;
     background: white;
     top: 10%;
-    left: 8%;
+    left: 9%;
     padding: 80px;
     z-index: 5;
     color: black;

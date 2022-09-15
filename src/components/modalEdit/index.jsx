@@ -1,4 +1,4 @@
-import { Edit } from "./styles"
+import { Edit, Button } from "./styles"
 import { useState, useEffect } from "react";
 import { useAddContext } from "../../hooks/useAddContext";
 import { useForm } from "react-hook-form";
@@ -23,18 +23,20 @@ export function ModalEdit ({info, index}) {
         novoLocal.push(changedItem);
         localStorage.setItem('minhasEntrevistas', JSON.stringify(novoLocal));
         setAddFile(true);
+        reset();
     };
 
     const dateFormat = date => date && `${date.substr(8, 9)}/${date.substr(5, 2)}/${date.substr(0, 4)}`;
     return (
         <Edit isEditOpen={isModalEditOpen}>
+        <h4 onClick={() => setisModalEditOpen(false)}>X</h4>
         <form onSubmit={handleSubmit(changeItem)}>
         <label>Empresa: <input name="empresa" autoComplete="off" {...register("empresa")} defaultValue={info.empresa} /></label>
         <label>Inscrição: <input name="inscricao" {...register("inscricao")}  value={dateFormat(info.inscricao)} /></label>
         <label>Retorno: <input name="retorno" {...register("retorno")}  value={dateFormat(info.retorno)} /></label>
         <label>Descrição: <input name="descricao" autoComplete="off" {...register("descricao")}  defaultValue={info.descricao} /></label>
         <label>Status: <input name="status" autoComplete="off" {...register("status")}  defaultValue={info.status} /></label>
-        <button type="submit" onClick={() => setisModalEditOpen(false)}>X</button>
+        <Button type="submit" onClick={() => setisModalEditOpen(false)}>Editar</Button>
         </form>
     </Edit>
     )

@@ -5,6 +5,7 @@ const AddContext = createContext();
 export function AddContextProvider({ children }) {
     const [ isModalOpen, setisModalOpen ] = useState(false);
     const [ isModalEditOpen, setisModalEditOpen ] = useState(false);
+    const [ name, setName ] = useState('');
     const [ addFile, setAddFile ] = useState(false);
     const [ info, setInfo ] = useState({});
 
@@ -18,7 +19,9 @@ return (
         addFile,
         setAddFile,
         info,
-        setInfo,
+        setInfo, 
+        name,
+        setName, 
       }}
     >
       {children}
@@ -28,6 +31,6 @@ return (
 
 export function useAddContext() {
   const context = useContext(AddContext);
-  const { isModalOpen, setisModalOpen, addFile, setAddFile, isModalEditOpen, setisModalEditOpen, info, setInfo   } = context;
-  return { isModalOpen, setisModalOpen, addFile, setAddFile, isModalEditOpen, setisModalEditOpen, info, setInfo   };
+  const { isModalOpen, setisModalOpen, addFile, setAddFile, isModalEditOpen, setisModalEditOpen, info, setInfo, name, setName   } = context;
+  return { isModalOpen, setisModalOpen, addFile, setAddFile, isModalEditOpen, setisModalEditOpen, info, setInfo, name, setName   };
 }

@@ -29,11 +29,11 @@ export function Cards () {
         loadFiles();
     }, [load, addFile])
     setAddFile(false);
-    if(!localAtual) {
+/*     if(!localAtual) {
         return (
             <h1>Vazio :c</h1>
         )
-    }
+    } */
     return (
         <Table>
             <ModalEdit info={info} index={indexAtual} />
@@ -41,7 +41,7 @@ export function Cards () {
                 <th>Empresa</th>
                 <th>Inscrição</th>
                 <th>Retorno</th>
-                <th>Descrição</th>
+                <th id="describe" >Descrição</th>
                 <th>Status</th>
             </tr>
            {localAtual && localAtual.map((interview, index) => {

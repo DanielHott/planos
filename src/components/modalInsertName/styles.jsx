@@ -19,10 +19,12 @@ export const Container = styled.div`
   display: flex;
   visibility: ${(props) => (props.isModalOpen ? "visible" : "hidden")};
   justify-content: center;
+  color: black;
 `;
 
 export const NameInsert = styled.form`
     width: 300px;
+    border: 2px solid #0044ff;
     display: flex;
     justify-content: center;
     align-items: center;

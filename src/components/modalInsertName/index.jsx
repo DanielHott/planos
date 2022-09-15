@@ -1,16 +1,19 @@
 import { Modal, Container, NameInsert, Button } from "./styles";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useAddContext } from "../../hooks/useAddContext";
 
 export function InsertName () {
     const {
         register,
         handleSubmit,
       } = useForm();
+    const { setName } = useAddContext();
     const [showComponent, setShowComponent] = useState(true);
     const localName = localStorage.getItem('myName');
     const saveName = data => {
         localStorage.setItem('myName', data.myName);
+        setName(data.myName);
         setShowComponent(false);
     }
     if (!localName) {
