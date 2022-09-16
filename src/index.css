@@ -4,9 +4,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 2rem;
-  background-image: url('/public/fundo.jpg');
-  background-size: cover;
 }
 
 code {

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100vw;
+    @media (min-width: 1000px) {
+    width: 100%;
     background: #0044ff;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     color: white;
@@ -11,4 +12,16 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-around;
     height: 2rem;
+    }
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    height: 5rem;
+    background: #0044ff;
+    color: white;
+    align-items: center;
+    margin-left: 0px;
+    justify-content: space-evenly;
 `;

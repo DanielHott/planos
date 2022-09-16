@@ -1,11 +1,19 @@
-.App {
-  text-align: center;
+@media (min-width: 1000px) {
+  body {
+  background-image: url('/public/fundo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 2rem;
+  }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (max-width: 1000px) {
+  body {
+  background-image: url('/public/fundo.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

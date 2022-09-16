@@ -1,7 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    @media (min-width: 1000px) {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    height: 5rem;
+    border: 2px solid #0044ff;
+    margin-bottom: 10px;
+    width: 100%;
+    }
+    display: flex;
+    width: 800px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
