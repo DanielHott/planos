@@ -11,7 +11,7 @@ export function Header () {
     } , [name])
     return (
         <Container>
-            <h1>{localName ? `Processos Seletivos de ${localName}` : "Meus Processos Seletivos"}</h1>
+            <h2>{localName ? `Processos Seletivos de ${localName}` : "Meus Processos Seletivos"}</h2>
             <Button onClick={() => setisModalOpen(isModalOpen === true ? false : true)}>
                 Adicionar {">"}</Button>
         </Container>

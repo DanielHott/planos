@@ -3,14 +3,14 @@ import styled from "styled-components";
 export const Table = styled.table`
     @media (min-width: 1000px) {
         width: 100%;
+        padding: 1rem;
         th, td {
-            border: 1px solid #0044ff;
+        border: 1px solid #3E4C5E;
         padding: 10px;
         max-width: 32rem;
         :hover {
             
-            border: 1px solid black;
-            z-index: 10;
+
         }
     }
     #describe {
@@ -21,12 +21,11 @@ export const Table = styled.table`
 }
     width: 820px;
     th, td {
-        border: 1px solid #0044ff;
+        border: 1px solid #3E4C5E;
         padding: 5px;
         max-width: 32rem;
         :hover {
-            border: 1px solid black;
-            z-index: 10;
+
         }
     }
     #describe {
@@ -37,13 +36,14 @@ export const Table = styled.table`
 `;
 
 export const Button = styled.button`
-    border: 2px solid #0044ff;
+    border: 2px solid #3E4C5E;
     border-radius: 10px;
+    color: #a0dda0;
     font-weight: 800;
-    background-color: white;
+    background-color: #222A35;
     cursor: pointer;
     padding: 0.5rem;
     :hover {
-        border: 2px solid black;
+
     }
 `;

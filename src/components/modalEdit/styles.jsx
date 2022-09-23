@@ -27,6 +27,11 @@ export const Edit = styled.div`
             padding: 5px;
             margin-bottom: 10px;
         }
+        button {
+            margin-right: 95px;
+            margin-top: 10px;
+            margin-bottom: -20px;
+        }
     }
     h4 {
         position: absolute;
@@ -63,6 +68,11 @@ export const Edit = styled.div`
             padding: 5px;
             margin-bottom: 10px;
         }
+        button {
+            margin-right: 62px;
+            margin-top: 10px;
+            margin-bottom: -20px;
+        }
     }
     h4 {
         position: absolute;
@@ -73,12 +83,12 @@ export const Edit = styled.div`
 `;
 
 export const Button = styled.button`
-    border: 2px solid black;
+    border: 2px solid #3E4C5E;
     border-radius: 10px;
-    background-color: white;
-    margin-top: 20px;
-    margin-bottom: -50px;
+    color: #a0dda0;
     font-weight: 800;
+    background-color: #222A35;
+    cursor: pointer;
     padding: 0.5rem;
     :hover {
         box-shadow: 2px 5px 16px 0px #000000

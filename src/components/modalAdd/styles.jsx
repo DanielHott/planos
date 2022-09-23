@@ -147,10 +147,12 @@ export const Form = styled.form`
 `;
 
 export const Button = styled.button`
-    border: 2px solid black;
+    border: 2px solid #3E4C5E;
     border-radius: 10px;
-    background-color: white;
+    color: #a0dda0;
     font-weight: 800;
+    background-color: #222A35;
+    cursor: pointer;
     padding: 0.5rem;
     :hover {
         box-shadow: 2px 5px 16px 0px #000000
